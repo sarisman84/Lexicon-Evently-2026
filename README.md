@@ -35,9 +35,9 @@ Följande är extra och sådant ni inte måste ha med om ni inte hinner/vill/kan
 
 ## Code Review (fredag 12/6)
 ### Tider
-* 13.05 Kort gemensamt uppstartsmöte.
-* 13.15 Möten i grupperna.
-* 14.30 Samilng i helklass.
+* 13.05 Kort gemensamt uppstartsmöte
+* 13.15 Möte i grupperna
+* 14.30 Återsamling i helklass
 
 ### I grupp
 Visa och berätta lite om:
