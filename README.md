@@ -37,6 +37,18 @@ Följande är extra och sådant ni inte måste ha med om ni inte hinner/vill/kan
 ### Desktop
 Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
 
+![Desktop](Design/evently_desktop.png "Desktop")
+
+### Tablet
+Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
+
+![Tablet](Design/evently_tablet.png "Tablet")
+
+### Mobile
+Bilderna för designen ligger under Design mappen och innehåller bilder för de olika vyerna samt bild för hover state.
+
+![Mobile](Design/evently_mobile.png "Mobile")
+
 
 ## Code Review
 
