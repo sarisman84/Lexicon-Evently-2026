@@ -232,6 +232,23 @@
   justify-content: center;
   justify-items: center;
   align-items: center;
+
+  padding-block: 2.5rem;
+  padding-inline: 4rem;
+}
+
+.content__footer-body{
+  text-align: center;
+}
+
+.content__footer-title {
+  font-weight: var(--fw-bold);
+  padding-block-end: 0.5rem;
+}
+
+.content__footer-description {
+  font-size: 1.25ch;
+  line-height: 1.1rem;
 }
 
 .card {
