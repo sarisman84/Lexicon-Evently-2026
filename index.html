@@ -71,11 +71,12 @@
         </div>
       </header>
       <aside class="search">
-        <header aria-labelledby="search-title">
-          <h3 id="search-title" class="search__title">Hitta rätt evenemang</h3>
-        </header>
-
         <form action="#" method="post" class="search__elements">
+          <header aria-labelledby="search-title">
+            <h3 id="search-title" class="search__title">
+              Hitta rätt evenemang
+            </h3>
+          </header>
           <div class="u-form-field">
             <label>Sökord</label>
             <input
@@ -101,7 +102,10 @@
             <label>Datum</label>
             <input type="date" id="date-picker" name="date-picker" />
           </div>
-          <button type="submit" class="u-button u-button--filled">
+          <button
+            type="submit"
+            class="u-button u-button--filled search__submit"
+          >
             Sök evenemang
           </button>
         </form>
@@ -328,7 +332,10 @@
     <!-- Footer -->
     <footer class="footer">
       <section class="footer__section footer__section--summary">
-        <header aria-labelledby="footer-summary--title" class="banner__logo section__logo">
+        <header
+          aria-labelledby="footer-summary--title"
+          class="banner__logo section__logo"
+        >
           <svg
             width="32"
             height="32"
@@ -341,7 +348,9 @@
               d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"
             />
           </svg>
-          <h4 id="footer-summary--title" class="banner__title section__title">Evently</h4>
+          <h4 id="footer-summary--title" class="banner__title section__title">
+            Evently
+          </h4>
         </header>
         <p class="summary__content">
           Evently samlar lokala evenemang så att du enkelt kan upptäcka, planera

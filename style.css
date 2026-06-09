@@ -3,6 +3,11 @@
 
 /* Properties */
 :root {
+  /* Font Sizes */
+  --fs-tag: 1.25ch;
+  --fs-footer-s-title: 1.25ch;
+  --fs-search-title: 2ch;
+
   /* Font Weights*/
   --fw-tag: 600;
   --fw-bold: bold;
@@ -38,10 +43,13 @@
   color: var(--gray-600);
 
   font-weight: var(--fw-tag);
+  font-size: var(--fs-tag);
 
   padding-block: var(--pd-tag-block);
   padding-inline: var(--pd-tag-inline);
   border-radius: 0.25rem;
+
+  text-transform: uppercase;
 }
 
 .u-visually--hidden {
@@ -205,21 +213,26 @@
 }
 
 .search {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, 1fr);
-
-  justify-content: center;
-
   background-color: var(--purple-100);
-  width: 100vw;
-
   padding-block: 2rem;
 }
 
 .search__title {
   padding-block-end: 1rem;
+
+  font-size: var(--fs-search-title);
   font-weight: var(--fw-bold);
 }
+
+.search__elements {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 1fr);
+
+  justify-content: center;
+}
+
+/* .search__submit {
+} */
 
 .content__header {
   display: flex;
@@ -377,6 +390,11 @@
   padding-block-end: 1rem;
 }
 
+.section__title {
+  text-transform: uppercase;
+  font-size: var(--fs-footer-s-title);
+}
+
 .section__content {
   max-width: 9rem;
   text-wrap: pretty;
@@ -394,4 +412,31 @@
   a {
     color: var(--gray-400);
   }
+}
+
+/* Tags */
+
+.u-tag[data-type="concert"] {
+  background-color: var(--purple-200);
+  color: var(--purple-600);
+}
+
+.u-tag[data-type="market"] {
+  background-color: var(--mint-200);
+  color: var(--emerald-800);
+}
+
+.u-tag[data-type="workshop"] {
+  background-color: var(--orange-100);
+  color: var(--orange-800);
+}
+
+.u-tag[data-type="family"] {
+  background-color: var(--pink-100);
+  color: var(--pink-800);
+}
+
+.u-tag[data-type="sport"] {
+  background-color: var(--blue-100);
+  color: var(--blue-800);
 }
