@@ -17,8 +17,9 @@
   <body>
     <!-- Header -->
     <header class="header">
-      <nav>
-        <div>
+      <a href="#main" class="u-visually--hidden">Skippa till huvudkontent</a>
+      <nav aria-label="Main Navigation" class="banner">
+        <div class="banner__logo">
           <svg
             width="32"
             height="32"
@@ -31,47 +32,62 @@
               d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"
             />
           </svg>
-          <span> Evently</span>
+          <span class="banner__title"> Evently</span>
         </div>
-        <ul>
-          <li><a href="#">Hem</a></li>
-          <li><a href="#">Evenemang</a></li>
-          <li><a href="#">Kategorier</a></li>
-          <li><a href="#">Om oss</a></li>
-          <li><a href="#">Kontakt</a></li>
+        <ul class="banner__navigation">
+          <li><a href="#" class="u-visually--hidden">Hem</a></li>
+          <li><a href="#" class="u-visually--hidden">Evenemang</a></li>
+          <li><a href="#" class="u-visually--hidden">Kategorier</a></li>
+          <li><a href="#" class="u-visually--hidden">Om oss</a></li>
+          <li><a href="#" class="u-visually--hidden">Kontakt</a></li>
         </ul>
-        <a href="#"> Skapa konto </a>
+        <a href="#" class="u-button u-button--filled u-visually--hidden">
+          Skapa konto
+        </a>
       </nav>
     </header>
 
     <!-- Main content -->
     <main>
-      <header>
-        <div>
-          <span>Upptäck. Upplev. Minns.</span>
-          <h1>Hitta lokala evenemang du kommer älska</h1>
-          <p>
+      <header aria-labelledby="hero-intro" class="hero">
+        <div class="hero__content">
+          <span class="u-tag hero__tag">Upptäck. Upplev. Minns.</span>
+          <h1 id="hero-intro" class="hero__title">
+            Hitta lokala evenemang du kommer älska
+          </h1>
+          <p class="hero__description">
             Från konserter och marknader till workshops och familjeaktiviteter.
             Upptäck vad som händer nära dig.
           </p>
-          <a href="#">Utforska evenemang</a>
-          <a href="#">Se helgens tips</a>
+          <div class="hero__buttons">
+            <a href="#" class="u-button u-button--filled">Utforska evenemang</a>
+            <a href="#" class="u-button">Se helgens tips</a>
+          </div>
         </div>
-        <div></div>
+        <div class="hero__collection">
+          <img src="https://picsum.photos/1920/1080?random=1" />
+          <img src="https://picsum.photos/1920/1080?random=2" />
+          <img src="https://picsum.photos/1920/1080?random=3" />
+        </div>
       </header>
-      <aside>
-        <header>
-          <h3>Hitta rätt evenemang</h3>
+      <aside class="search">
+        <header aria-labelledby="search-title">
+          <h3 id="search-title" class="search__title">Hitta rätt evenemang</h3>
         </header>
 
-        <form>
-          <div>
+        <form action="#" method="post" class="search__elements">
+          <div class="u-form-field">
             <label>Sökord</label>
-            <input />
+            <input
+              type="text"
+              id="key-search"
+              name="key-search"
+              required
+              placeholder="Sök på t.ex, konsert, yoga..."
+            />
           </div>
-          <div>
+          <div class="u-form-field">
             <label>Kategori</label>
-
             <select>
               <option>Alla kategorier</option>
               <option>Konsert</option>
@@ -81,111 +97,165 @@
               <option>Sport / Hälsa</option>
             </select>
           </div>
-
-          <div>
+          <div class="u-form-field">
             <label>Datum</label>
-            <input />
+            <input type="date" id="date-picker" name="date-picker" />
           </div>
-          <button>Sök evenemang</button>
+          <button type="submit" class="u-button u-button--filled">
+            Sök evenemang
+          </button>
         </form>
       </aside>
-      <article>
-        <header>
-          <h2>Populära evenemang</h2>
-          <a href="#">Se alla evenemang</a>
+
+      <article class="content">
+        <header aria-labelledby="content-title" class="content__header">
+          <h2 id="content-title" class="content__title">Populära evenemang</h2>
+          <a href="#" class="content__link">Se alla evenemang</a>
         </header>
-        <div>
-          <section>
-            <img />
-            <div>
-              <span>Konsert</span>
-              <span> 24 maj</span>
+        <div class="content__card-collection">
+          <section class="card">
+            <header aria-labelledby="card-title" class="card__header">
+              <h4 id="card-title" class="card__title">
+                Indie Night med Nova Sun
+              </h4>
+            </header>
+            <img
+              src="https://picsum.photos/1920/1080?random=4"
+              class="card__preview"
+            />
+            <div class="card__metadata">
+              <span class="u-tag" data-type="concert">Konsert</span>
+              <span class="card__date"> 24 maj</span>
             </div>
-            <h4>Indie Night med Nova Sun</h4>
-            <footer>
-              <span>Pustervik, Göteborg</span>
+
+            <footer class="card__footer">
+              <span class="card__location">Pustervik, Göteborg</span>
             </footer>
           </section>
 
-          <section>
-            <img />
-            <div>
-              <span>Marknad</span>
-              <span> 25 maj</span>
+          <section class="card">
+            <header aria-labelledby="card-title" class="card__header">
+              <h4 id="card-title" class="card__title">
+                Vårmarknad i Slottsskogen
+              </h4>
+            </header>
+            <img
+              src="https://picsum.photos/1920/1080?random=5"
+              class="card__preview"
+            />
+            <div class="card__metadata">
+              <span class="u-tag" data-type="market">Marknad</span>
+              <span class="card__date"> 25 maj</span>
             </div>
-            <h4>Vårmarknad i Slottsskogen</h4>
-            <footer>
-              <span>Slottsskogen, Göteborg</span>
+
+            <footer class="card__footer">
+              <span class="card__location">Slottsskogen, Göteborg</span>
             </footer>
           </section>
 
-          <section>
-            <img />
-            <div>
-              <span>Workshop</span>
-              <span> 27 maj</span>
+          <section class="card">
+            <header aria-labelledby="card-title" class="card__header">
+              <h4 id="card-title" class="card__title">
+                Keramikkurs för nybörjare
+              </h4>
+            </header>
+            <img
+              src="https://picsum.photos/1920/1080?random=6"
+              class="card__preview"
+            />
+            <div class="card__metadata">
+              <span class="u-tag" data-type="workshop">Workshop</span>
+              <span class="card__date"> 27 maj</span>
             </div>
-            <h4>Keramikkurs för nybörjare</h4>
-            <footer>
-              <span>Studio Lera, Göteborg</span>
+
+            <footer class="card__footer">
+              <span class="card__location">Studio Lera, Göteborg</span>
             </footer>
           </section>
 
-          <section>
-            <img />
-            <div>
-              <span>Familj</span>
-              <span> 31 maj</span>
+          <section class="card">
+            <header aria-labelledby="card-title" class="card__header">
+              <h4 id="card-title" class="card__title">
+                Barnteater: Den lilla sjöjungfrun
+              </h4>
+            </header>
+            <img
+              src="https://picsum.photos/1920/1080?random=7"
+              class="card__preview"
+            />
+            <div class="card__metadata">
+              <span class="u-tag" data-type="family">Familj</span>
+              <span class="card__date"> 31 maj</span>
             </div>
-            <h4>Barnteater: Den lilla sjöjungfrun</h4>
-            <footer>
-              <span>Folkteatern, Göteborg</span>
+
+            <footer class="card__footer">
+              <span class="card__location">Folkteatern, Göteborg</span>
             </footer>
           </section>
 
-          <section>
-            <img />
-            <div>
-              <span>Sport</span>
-              <span> 1 juni</span>
+          <section class="card">
+            <header aria-labelledby="card-title" class="card__header">
+              <h4 id="card-title" class="card__title">
+                Morgonlöpning & frukost
+              </h4>
+            </header>
+            <img
+              src="https://picsum.photos/1920/1080?random=8"
+              class="card__preview"
+            />
+            <div class="card__metadata">
+              <span class="u-tag" data-type="sport">Sport</span>
+              <span class="card__date"> 1 juni</span>
             </div>
-            <h4>Morgonlöpning & frukost</h4>
-            <footer>
-              <span>Slottsskogen, Göteborg</span>
+
+            <footer class="card__footer">
+              <span class="card__location">Slottsskogen, Göteborg</span>
             </footer>
           </section>
 
-          <section>
-            <img />
-            <div>
-              <span>Konsert</span>
-              <span> 3 juni</span>
+          <section class="card">
+            <header aria-labelledby="card-title" class="card__header">
+              <h4 id="card-title" class="card__title">
+                Jazzkväll på Vasateatern
+              </h4>
+            </header>
+            <img
+              src="https://picsum.photos/seed/picsum/1920/1080?random=9"
+              class="card__preview"
+            />
+            <div class="card__metadata">
+              <span class="u-tag" data-type="concert">Konsert</span>
+              <span class="card__date"> 3 juni</span>
             </div>
-            <h4>Jazzkväll på Vasateatern</h4>
-            <footer>
-              <span>Vasateatern, Göteborg</span>
+
+            <footer class="card__footer">
+              <span class="card__location">Vasateatern, Göteborg</span>
             </footer>
           </section>
         </div>
-        <footer>
-          <section>
-            <svg
-              class="m-1 text-emerald-800"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path
-                d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z"
-              ></path>
-              <line x1="9" y1="5" x2="9" y2="19"></line>
-            </svg>
+
+        <footer class="content__footer">
+          <section class="content__footer-section">
+            <div class="u-icon--filled">
+              <svg
+                class="m-1 text-emerald-800"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M2 9a3 3 0 0 1 0 6v2a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-2a3 3 0 0 1 0-6V7a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v2z"
+                ></path>
+                <line x1="9" y1="5" x2="9" y2="19"></line>
+              </svg>
+            </div>
+
             <div>
               <h6>Gratis & prisvärt</h6>
               <p>
@@ -195,24 +265,27 @@
             </div>
           </section>
 
-          <section>
-            <svg
-              class="m-1 text-emerald-800"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-              <circle cx="9" cy="7" r="4"></circle>
-              <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
-              <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
-            </svg>
+          <section class="content__footer-section">
+            <div class="u-icon--filled">
+              <svg
+                class="m-1 text-emerald-800"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+              </svg>
+            </div>
+
             <div>
               <h6>För alla åldrar</h6>
               <p>
@@ -222,22 +295,25 @@
             </div>
           </section>
 
-          <section>
-            <svg
-              class="m-1 text-emerald-800"
-              width="24"
-              height="24"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
-              <circle cx="12" cy="10" r="3"></circle>
-            </svg>
+          <section class="content__footer-section">
+            <div class="u-icon--filled">
+              <svg
+                class="m-1 text-emerald-800"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </div>
+
             <div>
               <h6>Nära dig</h6>
               <p>Upptäck evenemang i ditt område och stöd lokala arrangörer.</p>
@@ -248,14 +324,16 @@
     </main>
 
     <!-- Footer -->
-    <footer>
-      <section>
-        <h6>Evently</h6>
-        <p>
+    <!-- <footer class="footer">
+      <section class="footer__summary">
+        <header aria-labelledby="footer-summary--title" class="summary__header">
+          <h6 id="footer-summary--title" class="summary__title">Evently</h6>
+        </header>
+        <p class="summary__content">
           Evently samlar lokala evenemang så att du enkelt kan upptäcka, planera
           och dela upplevelser som berikar din vardag.
         </p>
-        <div>
+        <div class="summary__media">
           <svg
             width="20"
             height="20"
@@ -304,30 +382,47 @@
         </div>
       </section>
 
-      <section>
-        <h6>Utforska</h6>
+      <section class="footer__links">
+        <header aria-labelledby="footer__links--title" class="links__header">
+          <h6 id="footer__links--title" class="links__title">Utforska</h6>
+        </header>
+
         <a href="#">Alla evenemang</a>
         <a href="#">Kategorier</a>
         <a href="#">Helgens tips</a>
         <a href="#">Populära</a>
       </section>
 
-      <section>
-        <h6>Om Evently</h6>
+      <section class="footer__links--about">
+        <header
+          aria-labelledby="footer__links--about--title"
+          class="links--about__header"
+        >
+          <h6 id="footer__links--about--title" class="links--about__title">
+            Om Evently
+          </h6>
+        </header>
+
         <a href="#">Om oss</a>
         <a href="#">För arrangörerr</a>
         <a href="#">Vanliga frågor</a>
         <a href="#">Nyheter</a>
       </section>
 
-      <section>
-        <h6>Kontakt</h6>
+      <section class="footer__contact">
+        <header
+          aria-labelledby="footer__contact--title"
+          class="contact__header"
+        >
+          <h6 id="footer__contact--title" class="contact__title">Kontakt</h6>
+        </header>
+
         <address>
           <a href="mailto:info@evently.se">info@evently.se</a>
           <a href="tel:031-123 45 67">031-123 45 67</a>
           <p>Stora Badhusgatan 18 411 21 Göteborg</p>
         </address>
       </section>
-    </footer>
+    </footer> -->
   </body>
 </html>

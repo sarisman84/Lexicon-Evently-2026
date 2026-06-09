@@ -1,0 +1,35 @@
+:root {
+  /* Fonts */
+  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
+  --font-poppins: "Poppins", system-ui, -apple-system, sans-serif;
+
+  /* Brand Colors */
+  --purple-100: oklch(95.6% 0.028 282);
+  --purple-200: oklch(91.7% 0.049 281);
+  --purple-400: oklch(65.382% 0.18828 279.856);
+  --purple-600: oklch(51.52% 0.2801 282.26);
+  --purple-800: oklch(33.8% 0.24 285);
+  --indigo-100: oklch(94.5% 0.015 264);
+
+  /* Neutral Colors */
+  --gray-50: oklch(98.53% 0.0076 250.77);
+  --gray-100: oklch(96.5% 0.01 250);
+  --gray-300: oklch(85.82% 0.0156 254.4);
+  --gray-400: oklch(70.12% 0.019 252.3);
+  --gray-600: oklch(44.51% 0.0304 257.65);
+  --gray-900: oklch(18.23% 0.0298 274.65);
+  --gray-950: oklch(18.23% 0.0298 274.65);
+  --white: oklch(100% 0 0);
+
+  /* Utility Colors */
+  --mint-50: oklch(97.5% 0.015 165);
+  --mint-200: oklch(92% 0.035 165);
+  --emerald-100: oklch(95.9% 0.04 144);
+  --emerald-800: oklch(52.71% 0.1654 142.1);
+  --orange-100: oklch(96.8% 0.05 90);
+  --orange-800: oklch(55% 0.14 75);
+  --pink-100: oklch(94.8% 0.035 348);
+  --pink-800: oklch(48.55% 0.2038 350.7);
+  --blue-100: oklch(92.8% 0.05 250);
+  --blue-800: oklch(45% 0.2 260);
+}
