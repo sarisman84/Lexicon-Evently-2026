@@ -1,7 +1,4 @@
 :root {
-  /* Fonts */
-  --font-inter: "Inter", system-ui, -apple-system, sans-serif;
-  --font-poppins: "Poppins", system-ui, -apple-system, sans-serif;
 
   /* Brand Colors */
   --purple-100: oklch(95.6% 0.028 282);
