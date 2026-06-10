@@ -9,10 +9,13 @@
 
   /* Font Sizes */
   --fs-tag: 1.25ch;
-  --fs-footer-s-title: 1.25ch;
-  --fs-search-title: 2ch;
-  --fs-content-link: 1ch;
-  --fs-content-footer__description: 1.25ch;
+
+  --fs-footer-s__title: 1.25ch;
+  --fs-footer__section: 1.25ch;
+
+  --fs-search__title: 2ch;
+  --fs-content__link: 1ch;
+  --fs-content__footer-description: 1.25ch;
 
   /* Font Weights*/
   --fw-tag: 600;
@@ -28,10 +31,10 @@
   --pd-default-inline: 1rem;
 
   --mx-pd-default-inline: 30rem;
-  --pf-pd-default-inline: 20%;
+  --pf-pd-default-inline: 30%;
 
   --pd-page-inline: 2rem;
-  --pd-page-inline--desktop: 30rem;
+  --pd-page-inline--desktop: 60rem;
 
   --pd-search-inline: 2rem;
   --pd-search-inline--desktop: var(--pd-page-inline--desktop);
@@ -257,7 +260,7 @@
 }
 
 .hero__collection {
-  display: inline-grid;
+  display: grid;
   grid-template-columns: repeat(auto-fit, minmax(1rem, 1fr));
   justify-content: center;
   justify-items: center;
@@ -295,6 +298,32 @@
   }
 }
 
+@container responsive-container (width > 910px) {
+  .hero {
+    grid-template-columns: repeat(2, minmax(1rem, 1fr));
+    align-items: center;
+  }
+}
+
+@container hero (width > 910px) {
+  .hero__collection {
+    grid-template-columns: repeat(3, minmax(1rem, 1fr));
+
+    > *:first-child {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+
+    > img:first-child {
+      aspect-ratio: inherit;
+    }
+
+    > *:last-child {
+      grid-column: inherit;
+    }
+  }
+}
+
 .search {
   background-color: var(--purple-100);
   padding-block: 2rem;
@@ -307,7 +336,7 @@
   padding-inline: var(--pd-search-inline);
   padding-block-end: 1rem;
 
-  font-size: var(--fs-search-title);
+  font-size: var(--fs-search__title);
   font-weight: var(--fw-bold);
 }
 
@@ -366,7 +395,7 @@
 
   text-wrap: nowrap;
   text-decoration: none;
-  font-size: var(--fs-content-link);
+  font-size: var(--fs-content__link);
   font-weight: var(--fw-bold);
 }
 
@@ -418,7 +447,7 @@
 }
 
 .content__footer-description {
-  font-size: var(--fs-content-footer__description);
+  font-size: var(--fs-content__footer-description);
   line-height: 1.1rem;
 }
 
@@ -481,16 +510,31 @@
 }
 
 /* Footer Blocks */
-
 .footer {
+  container-type: inline-size;
+  container-name: footer;
+
   color: var(--white);
   background-color: var(--gray-900);
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+
+  justify-content: start;
+  align-items: start;
+
+  gap: 1rem;
 
   padding-block: var(--pd-footer-block);
   padding-inline: var(--pd-footer-inline);
 }
 
 .footer__section--summary {
+  flex: 1 0 1;
+
   display: grid;
 
   justify-content: start;
@@ -500,8 +544,8 @@
 
 .summary__media {
   display: flex;
-  flex-direction: row;
   gap: 1rem;
+
   padding-block-start: 1rem;
   padding-block-end: 1.5rem;
 
@@ -510,15 +554,9 @@
   }
 }
 
-.footer__grid-elements {
-  display: grid;
-  grid-template-areas:
-    "explore about"
-    "contact .";
-  gap: 1rem;
-}
-
 .footer__section {
+  flex: 0 0 1;
+
   ul {
     list-style: none;
     line-height: 1.75rem;
@@ -526,7 +564,7 @@
 
   a,
   p {
-    font-size: 1.25ch;
+    font-size: var(--fs-footer__section);
     text-decoration: none;
   }
 }
@@ -536,16 +574,8 @@
   max-width: 16rem;
 }
 
-.footer__section--about {
-  grid-area: about;
-}
-
 .footer__section--explore {
-  grid-area: explore;
-}
-
-.footer__section--contact {
-  grid-area: contact;
+  flex: 0 0 10rem;
 }
 
 .section__logo {
@@ -555,7 +585,7 @@
 
 .section__title {
   text-transform: uppercase;
-  font-size: var(--fs-footer-s-title);
+  font-size: var(--fs-footer-s__title);
 }
 
 .section__content {
@@ -574,6 +604,22 @@
   color: var(--gray-400);
   a {
     color: var(--gray-400);
+  }
+}
+
+@container footer (width > 480px) {
+  .footer__container {
+    justify-content: space-evenly;
+  }
+  .footer__section {
+    width: inherit;
+    /* display: grid;
+    grid-template-areas: inherit;
+    grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr)); */
+  }
+
+  .footer__section--explore {
+    flex: inherit;
   }
 }
 
@@ -668,7 +714,7 @@ body {
     );
   }
 
-  .footer {
+  .footer__container {
     padding-inline: clamp(
       var(--pd-footer-inline),
       var(--pf-pd-default-inline),

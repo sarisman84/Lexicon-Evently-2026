@@ -85,7 +85,10 @@
 
     <!-- Main content -->
     <main>
+      <!-- Hero Section -->
       <header aria-labelledby="hero-intro" class="hero">
+
+         <!-- Main Content -->
         <div class="hero__content">
           <span class="u-tag hero__tag">Upptäck. Upplev. Minns.</span>
           <h1 id="hero-intro" class="hero__title">
@@ -100,16 +103,22 @@
             <a href="#" class="u-button">Se helgens tips</a>
           </div>
         </div>
+
+        <!-- Image Gallery -->
         <div class="hero__collection">
           <img src="https://picsum.photos/1920/1080?random=1" />
           <img src="https://picsum.photos/1920/1080?random=2" />
           <img src="https://picsum.photos/1920/1080?random=3" />
         </div>
       </header>
+
+      <!-- Search Section -->
       <aside class="search">
         <header aria-labelledby="search-title">
           <h3 id="search-title" class="search__title">Hitta rätt evenemang</h3>
         </header>
+
+         <!-- Form Collection -->
         <form action="#" method="post" class="search__elements">
           <div class="u-form-field">
             <label>Sökord</label>
@@ -145,12 +154,16 @@
         </form>
       </aside>
 
+      <!-- Main Content -->
       <article class="content">
         <header aria-labelledby="content-title" class="content__header">
           <h2 id="content-title" class="content__title">Populära evenemang</h2>
           <a href="#" class="content__link">Se alla evenemang</a>
         </header>
+
+         <!-- Card Gallery -->
         <div class="content__card-collection">
+
           <section class="card">
             <header aria-labelledby="card-title" class="card__header">
               <h4 id="card-title" class="card__title">
@@ -272,6 +285,7 @@
           </section>
         </div>
 
+        <!-- Main Content Footer (Green Section) -->
         <footer class="content__footer">
           <section class="content__footer-section">
             <div class="u-icon--filled u-icon-s-md u-icon--emerald">
@@ -365,86 +379,89 @@
 
     <!-- Footer -->
     <footer class="footer">
-      <section class="footer__section footer__section--summary">
-        <header
-          aria-labelledby="footer-summary--title"
-          class="banner__logo section__logo"
-        >
-          <svg
-            width="32"
-            height="32"
-            viewBox="0 0 24 24"
-            fill="currentColor"
-            xmlns="http://www.w3.org/2000/svg"
-            aria-hidden="true"
+      <!-- Wrapper -->
+      <div class="footer__container">
+        <section class="footer__section footer__section--summary">
+          <header
+            aria-labelledby="footer-summary--title"
+            class="banner__logo section__logo"
           >
-            <path
-              d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"
-            />
-          </svg>
-          <h4 id="footer-summary--title" class="banner__title section__title">
-            Evently
-          </h4>
-        </header>
-        <p class="summary__content">
-          Evently samlar lokala evenemang så att du enkelt kan upptäcka, planera
-          och dela upplevelser som berikar din vardag.
-        </p>
-        <div class="summary__media">
-          <a href="#" class="u-icon--outline u-icon-s-xs">
             <svg
-              width="20"
-              height="20"
+              width="32"
+              height="32"
               viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
-              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
-              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
-            </svg>
-          </a>
-          <a href="#" class="u-icon--outline u-icon-s-xs">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
               aria-hidden="true"
             >
               <path
-                d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
-              ></path>
+                d="M12 2c-.4 2.3-1.8 3.7-4.1 4.1C10.2 6.5 11.6 7.9 12 10.2c.4-2.3 1.8-3.7 4.1-4.1-2.3-.4-3.7-1.8-4.1-4.1zM6 10c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3zm12 2c-.3 1.7-1.3 2.7-3 3 1.7.3 2.7 1.3 3 3 .3-1.7 1.3-2.7 3-3-1.7-.3-2.7-1.3-3-3z"
+              />
             </svg>
-          </a>
-          <a href="#" class="u-icon--outline u-icon-s-xs">
-            <svg
-              width="20"
-              height="20"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              stroke-width="2"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              aria-hidden="true"
-            >
-              <path
-                d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
-              ></path>
-            </svg>
-          </a>
-        </div>
-      </section>
-      <div class="footer__grid-elements">
+            <h4 id="footer-summary--title" class="banner__title section__title">
+              Evently
+            </h4>
+          </header>
+          <p class="summary__content">
+            Evently samlar lokala evenemang så att du enkelt kan upptäcka,
+            planera och dela upplevelser som berikar din vardag.
+          </p>
+          <div class="summary__media">
+            <a href="#" class="u-icon--outline u-icon-s-xs">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path
+                  d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"
+                ></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="#" class="u-icon--outline u-icon-s-xs">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"
+                ></path>
+              </svg>
+            </a>
+            <a href="#" class="u-icon--outline u-icon-s-xs">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                aria-hidden="true"
+              >
+                <path
+                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </section>
         <section class="footer__section footer__section--explore">
           <nav aria-labelledby="footer__links--title" class="section__header">
             <h4 id="footer__links--title" class="section__title">Utforska</h4>
@@ -469,7 +486,6 @@
             </ul>
           </nav>
         </section>
-
         <section class="footer__section footer__section--contact">
           <header
             aria-labelledby="footer__contact--title"
