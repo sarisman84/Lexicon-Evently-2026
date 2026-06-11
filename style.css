@@ -8,6 +8,7 @@
   --font-poppins: "Poppins", system-ui, -apple-system, sans-serif;
 
   /* Font Sizes */
+  --fs-card__title: 1.75ch;
   --fs-tag: 1.25ch;
 
   --fs-footer-s__title: 1.25ch;
@@ -34,7 +35,7 @@
   --pf-pd-default-inline: 30%;
 
   --pd-page-inline: 2rem;
-  --pd-page-inline--desktop: 60rem;
+  --pd-page-inline--desktop: 30rem;
 
   --pd-search-inline: 2rem;
   --pd-search-inline--desktop: var(--pd-page-inline--desktop);
@@ -298,14 +299,12 @@
   }
 }
 
-@container responsive-container (width > 910px) {
+@container responsive-container (width > 1300px) {
   .hero {
     grid-template-columns: repeat(2, minmax(1rem, 1fr));
     align-items: center;
   }
-}
 
-@container hero (width > 910px) {
   .hero__collection {
     grid-template-columns: repeat(3, minmax(1rem, 1fr));
 
@@ -492,6 +491,7 @@
 }
 
 .card__title {
+  font-size: var(--fs-card__title);
   font-weight: var(--fw-bold);
 
   padding-block: var(--pd-card-block);

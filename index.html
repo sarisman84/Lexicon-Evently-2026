@@ -15,9 +15,9 @@
   </head>
 
   <body>
+    <a href="#main" class="u-visually--hidden">Skippa till huvudkontent</a>
     <!-- Header -->
     <header class="header">
-      <a href="#main" class="u-visually--hidden">Skippa till huvudkontent</a>
       <nav aria-label="Main Navigation" class="banner">
         <div class="banner__logo">
           <svg
@@ -87,8 +87,7 @@
     <main>
       <!-- Hero Section -->
       <header aria-labelledby="hero-intro" class="hero">
-
-         <!-- Main Content -->
+        <!-- Main Content -->
         <div class="hero__content">
           <span class="u-tag hero__tag">Upptäck. Upplev. Minns.</span>
           <h1 id="hero-intro" class="hero__title">
@@ -106,22 +105,31 @@
 
         <!-- Image Gallery -->
         <div class="hero__collection">
-          <img src="https://picsum.photos/1920/1080?random=1" />
-          <img src="https://picsum.photos/1920/1080?random=2" />
-          <img src="https://picsum.photos/1920/1080?random=3" />
+          <img
+            src="https://picsum.photos/1920/1080?random=1"
+            alt="En primär exempelbild av ett evenemang som Evently arrangerar."
+          />
+          <img
+            src="https://picsum.photos/1920/1080?random=2"
+            alt="En andra exempelbild av ett evenemang som Evently arrangerar."
+          />
+          <img
+            src="https://picsum.photos/1920/1080?random=3"
+            alt="En tredje exempelbild av ett evenemang som Evently arrangerar."
+          />
         </div>
       </header>
 
       <!-- Search Section -->
       <aside class="search">
         <header aria-labelledby="search-title">
-          <h3 id="search-title" class="search__title">Hitta rätt evenemang</h3>
+          <h2 id="search-title" class="search__title">Hitta rätt evenemang</h2>
         </header>
 
-         <!-- Form Collection -->
+        <!-- Form Collection -->
         <form action="#" method="post" class="search__elements">
           <div class="u-form-field">
-            <label>Sökord</label>
+            <label for="key-search">Sökord</label>
             <input
               type="text"
               id="key-search"
@@ -131,8 +139,8 @@
             />
           </div>
           <div class="u-form-field">
-            <label>Kategori</label>
-            <select>
+            <label for="category-picker">Kategori</label>
+            <select id="category-picker" name="category-picker">
               <option>Alla kategorier</option>
               <option>Konsert</option>
               <option>Marknad</option>
@@ -142,7 +150,7 @@
             </select>
           </div>
           <div class="u-form-field">
-            <label>Datum</label>
+            <label for="date-picker">Datum</label>
             <input type="date" id="date-picker" name="date-picker" />
           </div>
           <button
@@ -161,18 +169,18 @@
           <a href="#" class="content__link">Se alla evenemang</a>
         </header>
 
-         <!-- Card Gallery -->
+        <!-- Card Gallery -->
         <div class="content__card-collection">
-
           <section class="card">
             <header aria-labelledby="card-title" class="card__header">
-              <h4 id="card-title" class="card__title">
+              <h2 id="card-title" class="card__title">
                 Indie Night med Nova Sun
-              </h4>
+              </h2>
             </header>
             <img
               src="https://picsum.photos/1920/1080?random=4"
               class="card__preview"
+              alt="Indie Night med Nova Sun"
             />
             <div class="card__metadata">
               <span class="u-tag" data-type="concert">Konsert</span>
@@ -186,13 +194,14 @@
 
           <section class="card">
             <header aria-labelledby="card-title" class="card__header">
-              <h4 id="card-title" class="card__title">
+              <h2 id="card-title" class="card__title">
                 Vårmarknad i Slottsskogen
-              </h4>
+              </h2>
             </header>
             <img
               src="https://picsum.photos/1920/1080?random=5"
               class="card__preview"
+              alt="Vårmarknad i Slottsskogen"
             />
             <div class="card__metadata">
               <span class="u-tag" data-type="market">Marknad</span>
@@ -206,13 +215,14 @@
 
           <section class="card">
             <header aria-labelledby="card-title" class="card__header">
-              <h4 id="card-title" class="card__title">
+              <h2 id="card-title" class="card__title">
                 Keramikkurs för nybörjare
-              </h4>
+              </h2>
             </header>
             <img
               src="https://picsum.photos/1920/1080?random=6"
               class="card__preview"
+              alt="Keramikkurs för nybörjare"
             />
             <div class="card__metadata">
               <span class="u-tag" data-type="workshop">Workshop</span>
@@ -226,13 +236,14 @@
 
           <section class="card">
             <header aria-labelledby="card-title" class="card__header">
-              <h4 id="card-title" class="card__title">
+              <h2 id="card-title" class="card__title">
                 Barnteater: Den lilla sjöjungfrun
-              </h4>
+              </h2>
             </header>
             <img
               src="https://picsum.photos/1920/1080?random=7"
               class="card__preview"
+              alt="Barnteater: Den lilla sjöjungfrun"
             />
             <div class="card__metadata">
               <span class="u-tag" data-type="family">Familj</span>
@@ -246,13 +257,14 @@
 
           <section class="card">
             <header aria-labelledby="card-title" class="card__header">
-              <h4 id="card-title" class="card__title">
+              <h2 id="card-title" class="card__title">
                 Morgonlöpning & frukost
-              </h4>
+              </h2>
             </header>
             <img
               src="https://picsum.photos/1920/1080?random=8"
               class="card__preview"
+              alt="Morgonlöpning & frukost"
             />
             <div class="card__metadata">
               <span class="u-tag" data-type="sport">Sport</span>
@@ -266,13 +278,14 @@
 
           <section class="card">
             <header aria-labelledby="card-title" class="card__header">
-              <h4 id="card-title" class="card__title">
+              <h2 id="card-title" class="card__title">
                 Jazzkväll på Vasateatern
-              </h4>
+              </h2>
             </header>
             <img
               src="https://picsum.photos/seed/picsum/1920/1080?random=9"
               class="card__preview"
+              alt="Jazzkväll på Vasateatern"
             />
             <div class="card__metadata">
               <span class="u-tag" data-type="concert">Konsert</span>
@@ -309,7 +322,7 @@
             </div>
 
             <div class="content__footer-body">
-              <h4 class="content__footer-title">Gratis & prisvärt</h4>
+              <h3 class="content__footer-title">Gratis & prisvärt</h3>
               <p class="content__footer-description">
                 Hitta massor av evenemang som är gratis eller snälla mot
                 plånboken.
@@ -339,7 +352,7 @@
             </div>
 
             <div class="content__footer-body">
-              <h4 class="content__footer-title">För alla åldrar</h4>
+              <h3 class="content__footer-title">För alla åldrar</h3>
               <p class="content__footer-description">
                 Aktiviteter för både stora och små - hitta något som passar hela
                 familjen.
@@ -367,7 +380,7 @@
             </div>
 
             <div class="content__footer-body">
-              <h4 class="content__footer-title">Nära dig</h4>
+              <h3 class="content__footer-title">Nära dig</h3>
               <p class="content__footer-description">
                 Upptäck evenemang i ditt område och stöd lokala arrangörer.
               </p>
