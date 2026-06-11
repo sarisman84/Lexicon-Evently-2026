@@ -8,6 +8,7 @@
   --font-poppins: "Poppins", system-ui, -apple-system, sans-serif;
 
   /* Font Sizes */
+  --fs-hero__title: 5ch;
   --fs-card__title: 1.75ch;
   --fs-tag: 1.25ch;
 
@@ -19,6 +20,7 @@
   --fs-content__footer-description: 1.25ch;
 
   /* Font Weights*/
+  --fw-hero__title: 900;
   --fw-tag: 600;
   --fw-bold: bold;
 
@@ -26,6 +28,9 @@
   --mn-w-search-element: 12.5rem;
   --mn-w-search-element--full: 100%;
   --mn-w-content-card-size: 20rem;
+
+  /* Margins */
+  --m-hero__title-block-start: 1rem;
 
   /* Padding */
   --pd-default-block: 0.5ch;
@@ -232,7 +237,11 @@
 }
 
 .hero__title {
-  margin-block-start: 1rem;
+  font-family: var(--font-poppins);
+  font-size: var(--fs-hero__title);
+  font-weight: var(--fw-hero__title);
+
+  margin-block-start: var(--m-hero__title-block-start);
 }
 
 .hero__content {
