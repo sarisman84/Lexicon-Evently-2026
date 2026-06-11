@@ -15,10 +15,10 @@
   </head>
 
   <body>
-    <a href="#main" class="u-visually--hidden">Skippa till huvudkontent</a>
+    <a href="#main__content" aria-label="Skippa till huvudkontent" class="skip-link">Skippa till huvudkontent</a>
     <!-- Header -->
     <header class="header">
-      <nav aria-label="Main Navigation" class="banner">
+      <nav aria-label="Huvud Navigering" class="banner">
         <div class="banner__logo">
           <svg
             width="32"
@@ -43,7 +43,7 @@
         </ul>
 
         <div class="banner__right-edge">
-          <a href="#">
+          <a href="#" aria-label="Utforska">
             <svg
               width="20"
               height="20"
@@ -59,7 +59,7 @@
               <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
             </svg>
           </a>
-          <a href="#" class="banner__entry">
+          <a href="#" aria-label="Meny" class="banner__entry">
             <svg
               width="24"
               height="24"
@@ -84,7 +84,7 @@
     </header>
 
     <!-- Main content -->
-    <main>
+    <main id="main__content">
       <!-- Hero Section -->
       <header aria-labelledby="hero-intro" class="hero">
         <!-- Main Content -->
@@ -420,7 +420,11 @@
             planera och dela upplevelser som berikar din vardag.
           </p>
           <div class="summary__media">
-            <a href="#" class="u-icon--outline u-icon-s-xs">
+            <a
+              href="#"
+              aria-label="Instagram"
+              class="u-icon--outline u-icon-s-xs"
+            >
               <svg
                 width="20"
                 height="20"
@@ -439,7 +443,11 @@
                 <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
               </svg>
             </a>
-            <a href="#" class="u-icon--outline u-icon-s-xs">
+            <a
+              href="#"
+              aria-label="Facebook"
+              class="u-icon--outline u-icon-s-xs"
+            >
               <svg
                 width="20"
                 height="20"
@@ -456,7 +464,11 @@
                 ></path>
               </svg>
             </a>
-            <a href="#" class="u-icon--outline u-icon-s-xs">
+            <a
+              href="#"
+              aria-label="Twitter"
+              class="u-icon--outline u-icon-s-xs"
+            >
               <svg
                 width="20"
                 height="20"
