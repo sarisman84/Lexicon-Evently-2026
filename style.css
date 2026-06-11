@@ -477,7 +477,7 @@
 
 .content__footer {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  grid-template-columns: repeat(1, minmax(10rem, 1fr));
 
   justify-content: center;
   padding-inline: var(--pd-content__footer-inline);
@@ -514,6 +514,12 @@
 .content__footer-description {
   font-size: var(--fs-content__footer-description);
   line-height: 1.1rem;
+}
+
+@container content (width > 700px) {
+  .content__footer {
+    grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+  }
 }
 
 @container content (width > 910px) {
