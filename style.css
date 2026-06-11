@@ -308,7 +308,7 @@
   }
 }
 
-@container responsive-container (width > 1300px) {
+@container responsive-container (width > 1700px) {
   .hero {
     grid-template-columns: repeat(2, minmax(1rem, 1fr));
     align-items: center;
