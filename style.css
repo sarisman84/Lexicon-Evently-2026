@@ -34,7 +34,8 @@
   --m-hero__content-block-start: 0.5rem;
   --m-hero__content-block-end: 1rem;
 
-  --m-hero__content-inline-end: 5rem;
+  --m-hero__content-inline-end: 0rem;
+  --m-hero__content-inline-end--desktop: 3rem;
 
   /* Padding */
   --pd-default-block: 0.5ch;
@@ -335,6 +336,10 @@
 }
 
 @container hero (width > 480px) {
+  .hero__content {
+    margin-inline-end: var(--m-hero__content-inline-end--desktop);
+  }
+
   .hero__buttons {
     margin-block-end: inherit;
 
